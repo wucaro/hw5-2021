@@ -1,0 +1,195 @@
+/*BEGIN STARTER CSS - DO NO CHANGE*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #737373;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav li{
+  display:inline;
+  padding-right:20px;
+
+}
+
+
+nav{
+  background-color: #ddd;
+  padding: 25px 0; 
+  text-align: left;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+/*END STARTER CSS - DO NO CHANGE*/
+
+
+/*Req 1*/
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+}
+/*Req 2*/
+/*Write selector/rule property to add an underline when
+links in the navigation are in the hover or focus state.*/
+
+/*Req 3a*/
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+  /*Your code here*/
+}
+/*Req 3b*/
+/*Write selector/rule property to position the skip class element*/
+
+/*Req 4*/
+/*Write selector/rule property to style all elements when in focus*/
+
+/*Req 5*/
+.container{
+  /*Your Code Here*/
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+
+  
+  /*Req 6a - completed*/
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  /*Req 6b - completed*/
+  grid-row: 1 / auto;   /*Can you rewrite it?*/
+
+  /*Req 6c*/
+  /*Set background-image to header.jpg */
+ 
+
+}
+/*Req 7a* /
+.about, .method, .clients, .contact{
+  /*Your Code Here*/
+
+}
+
+/*Req 8a, 8b, and 8c*/
+.about-image, .method-image, .clients-image, .contact-image{
+  /*Your Code Here*/
+
+}
+
+/*Req 7b & 8d*/
+.about, .about-image{
+   /*Your Code Here*/
+
+}
+
+/*Req 7b & 8d*/
+.method, .method-image{
+   /*Your Code Here*/
+
+}
+
+/*Req 7b & 8d*/
+.clients, .clients-image{
+    /*Your Code Here*/
+
+}
+
+/*Req 7b & 8d*/
+.contact, .contact-image{
+    /*Your Code Here*/
+
+}
+
+/*Req 9*/
+.text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+  /*Your code here:*/
+
+}
+
+
+@media all and (min-width: 800px){
+  /*Req 10*/
+  nav{
+    padding: 30px 0px;
+    /*Your code here:*/
+  }
+
+  /*Req 11*/
+  .container{
+    /*Your code here:*/
+  }
+
+  /*Req 12*/
+  .about, .clients, .method-image, .contact-image{
+    /*Your code here:*/
+  }
+
+  /*Req 13*/
+  .about-image, .clients-image, .method, .contact{
+    /*Your code here:*/
+  }
+}
+
+
+
+/*You do not need to modify any code below this line.
+It is included for accessibility to turn off animations
+and movement for people who have modified their 
+preferences to reduce motion.*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
