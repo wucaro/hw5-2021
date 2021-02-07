@@ -55,7 +55,7 @@ header p{
 nav a{
   color: black;
   font-weight: bold;
-  text-decoration: none; 
+
 }
 /*Req 2*/
 /*Write selector/rule property to add an underline when
@@ -90,9 +90,6 @@ header{
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 1 / auto;   /*Can you rewrite it?*/
-
     
   /*Req 6a*/
   /*Set margin */
