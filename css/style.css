@@ -65,7 +65,7 @@ links in the navigation are in the hover or focus state.*/
 .skip a{
   background: white;
   left: 0;
-  padding: 6px;
+  padding: 7px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
