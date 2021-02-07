@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  background-color: #737373;
+  background-color: #737372;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -90,26 +90,26 @@ header{
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
-
-  
-  /*Req 6a - completed*/
   grid-column: 1 / -1;  /*Can you explain what this does?*/
-  /*Req 6b - completed*/
   grid-row: 1 / auto;   /*Can you rewrite it?*/
 
-  /*Req 6c*/
+    
+  /*Req 6a*/
+  /*Set margin */
+    
+  /*Req 6b*/
   /*Set background-image to header.jpg */
  
 
 }
 /*Req 7a*/
-.about, .method, .clients, .contact{
+.about, .method, .client, .contacts{
   /*Your Code Here*/
 
 }
 
 /*Req 8a, 8b, and 8c*/
-.about-image, .method-image, .clients-image, .contact-image{
+.about-image, .method-image, .client-image, .contact-image{
   /*Your Code Here*/
 
 }
@@ -127,19 +127,19 @@ header{
 }
 
 /*Req 7b & 8d*/
-.clients, .clients-image{
+.client, .client-image{
     /*Your Code Here*/
 
 }
 
 /*Req 7b & 8d*/
-.contact, .contact-image{
+.contacts, .contact-image{
     /*Your Code Here*/
 
 }
 
 /*Req 9*/
-.text-block{
+.text{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
@@ -148,7 +148,7 @@ header{
 }
 
 
-@media all and (min-width: 800px){
+@media all and (min-width: 880px){
   /*Req 10*/
   nav{
     padding: 30px 0px;
@@ -161,12 +161,12 @@ header{
   }
 
   /*Req 12*/
-  .about, .clients, .method-image, .contact-image{
+  .about, .client, .method-image, .contact-image{
     /*Your code here:*/
   }
 
   /*Req 13*/
-  .about-image, .clients-image, .method, .contact{
+  .about-image, .client-image, .method, .contacts{
     /*Your code here:*/
   }
 }
