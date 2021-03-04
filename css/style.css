@@ -55,12 +55,17 @@ header p{
 nav a{
   color: black;
   font-weight: bold;
+  text-decoration: none;
 
 }
+
+
 /*Req 2*/
 /*Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
-
+a:hover{
+  text-decoration: underline;
+}
 /*Req 3a*/
 .skip a{
   background: white;
@@ -69,8 +74,18 @@ links in the navigation are in the hover or focus state.*/
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-
+  position: relative;
+  top: -50px;
   /*Your code here*/
+}
+.skip a:focus{
+  position: relative;
+  top: 10px;
+}
+
+*:focus{
+  border-style: dashed;
+  border-width: 2px;
 }
 /*Req 3b*/
 /*Write selector/rule property to position the skip class element*/
@@ -80,10 +95,14 @@ links in the navigation are in the hover or focus state.*/
 
 /*Req 5*/
 .container{
-  /*Your Code Here*/
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-row-gap: 20px;
 }
 
 header{
+  
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
@@ -92,46 +111,50 @@ header{
   height: 400px;                /* Parallax effect */
     
   /*Req 6a*/
+  margin-bottom: 25px;
   /*Set margin */
     
   /*Req 6b*/
+  
+  background-image: url('../images/header.jpg');
   /*Set background-image to header.jpg */
- 
+  background-repeat: no-repeat;
 
 }
 /*Req 7a*/
 .about, .method, .client, .contacts{
-  /*Your Code Here*/
+  display: grid;
+  grid-column: 2/ span 2;
 
 }
 
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
-  /*Your Code Here*/
-
+  grid-column: 1/-1;
+  max-height: 650px;
+  overflow: hidden;
 }
 
 /*Req 7b & 8d*/
 .about, .about-image{
-   /*Your Code Here*/
+   grid-row: 1/span 1;
 
 }
 
 /*Req 7b & 8d*/
 .method, .method-image{
-   /*Your Code Here*/
+  grid-row: 2/span 1;
 
 }
 
 /*Req 7b & 8d*/
 .client, .client-image{
-    /*Your Code Here*/
-
+  grid-row: 3/span 1;
 }
 
 /*Req 7b & 8d*/
 .contacts, .contact-image{
-    /*Your Code Here*/
+  grid-row: 4/span 1;
 
 }
 
@@ -140,7 +163,7 @@ header{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  /*Your code here:*/
+  align-self: center;
 
 }
 
@@ -154,22 +177,26 @@ header{
   /*Req 10*/
   nav{
     padding: 30px 0px;
-    /*Your code here:*/
+    text-align: right;
+    vertical-align: middle;
+    
   }
 
   /*Req 11*/
   .container{
-    /*Your code here:*/
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 425px 425px 400px;
   }
 
   /*Req 12*/
   .about, .client, .method-image, .contact-image{
-    /*Your code here:*/
+    grid-column: 3/5;
   }
 
   /*Req 13*/
   .about-image, .client-image, .method, .contacts{
-    /*Your code here:*/
+    grid-column: 2/4;
   }
 }
 
@@ -180,18 +207,3 @@ It is included for accessibility to turn off animations
 and movement for people who have modified their 
 preferences to reduce motion.*/
 
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
-}
